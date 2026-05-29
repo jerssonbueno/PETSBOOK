@@ -1,0 +1,152 @@
+/* Estructura envolvente del módulo de registro para centrado absoluto en pantalla */
+.registro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f0eb; /* Base beige crema según la paleta gráfica del proyecto */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Tarjeta estructurada con dimensiones ajustadas para los campos del formulario */
+.registro-card {
+    background-color: #ffffff; /* Fondo blanco para generar contraste con el entorno */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra tenue para dar profundidad */
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+/* Identidades gráficas estandarizadas de la aplicación */
+.registro-logo {
+    color: #ff6f00; /* Naranja institucional de la marca */
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.registro-welcome {
+    font-size: 1.4rem;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.registro-subtitle {
+    color: #666666;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+/* Disposición horizontal para campos paralelos como Nombre y Apellido */
+.form-group-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 0;
+}
+
+.form-group-row .form-group {
+    flex: 1;
+}
+
+/* Control e inputs de entrada del formulario de registro */
+.registro-form .form-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.registro-form input,
+.registro-form .select-rol {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+/* Cambio de color de borde al enfocar los elementos de entrada */
+.registro-form input:focus,
+.registro-form .select-rol:focus {
+    border-color: #ff6f00;
+    outline: none;
+}
+
+/* Estilo específico para el selector de roles del sistema */
+.select-rol {
+    cursor: pointer;
+    color: #333333;
+    appearance: none; /* Elimina el estilo por defecto del navegador */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%23666666' d='M0 0l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+/* Botón de acción principal para la creación de la cuenta */
+.btn-registro {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6f00;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-registro:hover {
+    background-color: #e65c00; /* Variación de tono para el estado hover */
+}
+
+/* Formateo de alertas operativas basadas en las validaciones del prototipo */
+.alert-error {
+    background-color: #fce4e4; /* Fondo grisáceo-rojo suave para errores */
+    color: #cc0000;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    text-align: left;
+    border: 1px solid #f9c0c0;
+}
+
+.alert-success {
+    background-color: #e2f0d9; /* Fondo verde suave para la notificación exitosa */
+    color: #385723;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    border: 1px solid #c5e0b4;
+}
+
+/* Bloque inferior de enlaces para la navegación entre vistas */
+.registro-links {
+    margin-top: 25px;
+    font-size: 0.9rem;
+}
+
+.login-prompt {
+    color: #333333;
+    margin: 0;
+}
+
+.link-login-btn {
+    color: #ff6f00;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.link-login-btn:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,139 @@
+/* Contenedor principal para centrar la tarjeta de autenticación en la pantalla */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f0eb; /* Color de fondo beige crema según la identidad visual */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Tarjeta contenedora del formulario de acceso */
+.login-card {
+    background-color: #ffffff; /* Fondo blanco para hacer contraste con el entorno */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra tenue para dar profundidad */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Identidad de la marca y elementos tipográficos del prototipo */
+.login-logo {
+    color: #ff6f00; /* Color corporativo naranja principal */
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login-welcome {
+    font-size: 1.4rem;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.login-subtitle {
+    color: #666666;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+/* Estructura y espaciado de los campos del formulario */
+.login-form .form-group {
+    margin-bottom: 18px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+/* Cambio de color de borde al enfocar los elementos de entrada */
+.login-form input:focus {
+    border-color: #ff6f00;
+    outline: none;
+}
+
+/* Botón de acción principal para el envío de datos */
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6f00;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-login:hover {
+    background-color: #e65c00; /* Variación de tono para el estado hover */
+}
+
+/* Alertas de validación de usuario basadas en el diseño entregado */
+.alert-error {
+    background-color: #fce4e4; /* Color de fondo grisáceo-rojo suave para errores */
+    color: #cc0000;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    text-align: left;
+    border: 1px solid #f9c0c0;
+}
+
+.alert-success {
+    background-color: #e2f0d9; /* Fondo verde suave para la notificación exitosa */
+    color: #385723;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    border: 1px solid #c5e0b4;
+}
+
+/* Secciones de enlaces inferiores para navegación alternativa */
+.login-links {
+    margin-top: 25px;
+    font-size: 0.9rem;
+}
+
+.link-forgot {
+    color: #666666;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.link-forgot:hover {
+    text-decoration: underline;
+}
+
+.register-prompt {
+    color: #333333;
+    margin: 0;
+}
+
+.link-register {
+    color: #ff6f00;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.link-register:hover {
+    text-decoration: underline;
+}
