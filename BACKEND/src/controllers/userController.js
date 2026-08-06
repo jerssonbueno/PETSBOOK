@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require('../models/user');
 
 // Funcion para registrar un nuevo usuario en el sistema
 const registerUser = async (req, res) => {

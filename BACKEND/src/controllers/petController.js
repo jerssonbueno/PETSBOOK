@@ -1,4 +1,4 @@
-const Pet = require('../models/Pet');
+const Pet = require('../models/pet');
 
 // Registro de una nueva mascota vinculada a un dueño por su ID
 const registerPet = async (req, res) => {

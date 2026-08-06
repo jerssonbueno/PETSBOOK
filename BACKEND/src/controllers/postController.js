@@ -1,5 +1,5 @@
-const Post = require('../models/Post');
-const User = require('../models/User');
+const Post = require('../models/post');
+const User = require('../models/user');
 
 // Obtener todas las publicaciones para mostrarlas en el muro
 const obtenerPosts = async (req, res) => {
