@@ -4,8 +4,7 @@ const { connectDB } = require('./config/db');
 const userRoutes = require('./routes/userRoutes');
 const petRoutes = require('./routes/petRoutes');
 const postRoutes = require('./routes/postRoutes');
-const authRoutes = require('./routes/authRoutes'); // Importación de las rutas para el control de accesos
-require('dotenv').config();
+const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 
@@ -17,11 +16,11 @@ app.use(express.json());
 app.use('/api/users', userRoutes);
 app.use('/api/pets', petRoutes);
 app.use('/api/posts', postRoutes);
-app.use('/api/auth', authRoutes); // Vinculación de los endpoints encargados del login y registro
+app.use('/api/auth', authRoutes);
 
 connectDB();
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Servidor en funcionamiento en el puerto ${PORT}`);
-});
+}); 

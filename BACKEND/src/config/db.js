@@ -8,8 +8,14 @@ const sequelize = new Sequelize(
     process.env.DB_PASS, 
     {
         host: process.env.DB_HOST,
+        port: process.env.DB_PORT || 4000,
         dialect: 'mysql',
-        logging: false 
+        logging: false,
+        dialectOptions: {
+            ssl: {
+                rejectUnauthorized: true
+            }
+        }
     }
 );
 
@@ -17,7 +23,7 @@ const sequelize = new Sequelize(
 const connectDB = async () => {
     try {
         await sequelize.authenticate();
-        console.log('¡Conectado a MySQL con éxito!');
+        console.log('¡Conectado a TiDB Cloud / MySQL con éxito!');
 
         // Importamos los modelos justo en el momento de la sincronización para evitar dependencias circulares
         const User = require('../models/User');
@@ -31,8 +37,8 @@ const connectDB = async () => {
         User.hasMany(Post, { foreignKey: 'userId' });
         Post.belongsTo(User, { foreignKey: 'userId' });
 
-        // Sincronización de las tablas en la base de datos aplicando los cambios de estructura
-        await sequelize.sync({ alter: true });
+        // Sincronización de las tablas en la base de datos (force: false para evitar errores de ALTER TABLE en TiDB)
+        await sequelize.sync({ force: false });
         console.log('Tablas y relaciones sincronizadas correctamente');
 
     } catch (error) {
