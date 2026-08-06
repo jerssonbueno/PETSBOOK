@@ -26,9 +26,9 @@ const connectDB = async () => {
         console.log('¡Conectado a TiDB Cloud / MySQL con éxito!');
 
         // Importamos los modelos justo en el momento de la sincronización para evitar dependencias circulares
-        const User = require('../models/User');
-        const Pet = require('../models/Pet');
-        const Post = require('../models/Post');
+        const User = require('../models/user');
+        const Pet = require('../models/pet');
+        const Post = require('../models/post');
 
         // Configuración de llaves foráneas y relaciones entre los componentes
         User.hasMany(Pet, { foreignKey: 'userId' });
