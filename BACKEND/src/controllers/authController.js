@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require('../models/user');
 
 // Verificación de credenciales para el inicio de sesión
 const login = async (req, res) => {
