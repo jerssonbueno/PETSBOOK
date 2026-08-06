@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const { sequelize } = require('../config/db');
-const User = require('./User'); // Importamos al dueño
+const User = require('./user'); // Importamos al dueño
 
 const Pet = sequelize.define('Pet', {
     nombre: {
