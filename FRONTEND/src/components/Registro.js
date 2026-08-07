@@ -40,7 +40,7 @@ const Registro = ({ onRegisterSuccess, onSwitchToLogin }) => {
 
         try {
             // Petición asíncrona mediante axios hacia la ruta de autenticación organizada
-            const respuesta = await axios.post('https://petsbook-xrtr.onrender.com/api/auth/register', datos);
+            await axios.post('https://petsbook-xrtr.onrender.com/api/auth/register', datos);
             
             // Confirmación operativa y actualización de alertas de éxito en la vista
             setMensajeExito('Usuario registrado con éxito');
