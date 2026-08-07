@@ -14,7 +14,7 @@ const Muro = ({ usuarioLogueado }) => {
     // Función asíncrona para consultar el listado cronológico de posts en la API del servidor
     const obtenerPosts = async () => {
         try {
-            const res = await axios.get('http://localhost:3000/api/posts');
+            const res = await axios.get('https://petsbook-xrtr.onrender.com/api/posts');
             setPosts(res.data);
         } catch (err) {
             console.error("Error al traer el muro", err);
@@ -28,7 +28,7 @@ const Muro = ({ usuarioLogueado }) => {
 
         try {
             // Envío de datos al backend en inglés respetando la clave foránea de la relación con User
-            await axios.post('http://localhost:3000/api/posts', {
+            await axios.post('https://petsbook-xrtr.onrender.com/api/posts', {
                 contenido: nuevoPost,
                 userId: usuarioLogueado?.id // Mapea directamente el ID del usuario con sesión activa
             });

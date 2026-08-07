@@ -14,7 +14,7 @@ const ListaUsuarios = () => {
     // Funcion para realizar la peticion get al servidor backend
     const obtenerUsuarios = async () => {
         try {
-            const respuesta = await axios.get('http://localhost:3000/api/users');
+            const respuesta = await axios.get('https://petsbook-xrtr.onrender.com/api/users');
             setUsuarios(respuesta.data);
         } catch (error) {
             console.error('Error al obtener los usuarios:', error);

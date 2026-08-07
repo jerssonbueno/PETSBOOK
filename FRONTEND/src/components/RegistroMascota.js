@@ -12,7 +12,7 @@ const RegistroMascota = () => {
         e.preventDefault();
         try {
             const nuevaMascota = { nombre, especie, raza, edad: parseInt(edad), userId: parseInt(userId) };
-            const respuesta = await axios.post('http://localhost:3000/api/pets/register', nuevaMascota);
+            const respuesta = await axios.post('https://petsbook-xrtr.onrender.com/api/pets/register', nuevaMascota);
             alert(respuesta.data.message);
             // Limpiar campos
             setNombre(''); setEspecie(''); setRaza(''); setEdad(''); setUserId('');

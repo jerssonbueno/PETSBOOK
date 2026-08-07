@@ -13,7 +13,7 @@ const ListaMascotas = () => {
     // Peticion al servidor para traer todos los registros de la tabla Pets
     const obtenerMascotas = async () => {
         try {
-            const respuesta = await axios.get('http://localhost:3000/api/pets');
+            const respuesta = await axios.get('https://petsbook-xrtr.onrender.com/api/pets');
             setMascotas(respuesta.data);
         } catch (error) {
             console.error('Error al traer la lista de mascotas:', error);
